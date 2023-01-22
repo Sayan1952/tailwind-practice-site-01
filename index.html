@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Open+Sans&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
     tailwind.config = {
@@ -12,23 +15,33 @@
         extend: {
           colors: {
             clifford: '#da373d',
-          }
+          },
+          fontFamily: {
+        'manrope': ['"Manrope"', 'cursive'],
+          },
         }
-        
+
       }
     }
   </script>
 </head>
 <body>
     <!-- header  -->
-    <section class="flex w-full mx-auto mt-16 bg-grey-900 justify-center">
-        <div class="space-y-7">
-            <h1 class="text-7xl font-extrabold space-y-5">It's good <br> tea time at The <br> Tea House</h1>
+    <section class="lg:flex lg:w-full lg:mx-auto mt-16 bg-grey-900 justify-center">
+        <div class="space-y-7 flex flex-col justify-center items-center text-center lg:text-left lg:items-start">
+            <h1 class="text-7xl font-extrabold space-y-5 font-manrope">It's good <br> tea time at The <br> Tea House</h1>
             <h3 class="text-lg font-medium text-neutral-500">Tea and Botanical Solutions Supplier Give Optimum <br> Satisfaction To Your Taste Buds.</h3>
-            <button><a href="" class="text-xl font-medium text-white p-4 bg-gradient-to-r from-[#FF8938] to-[#FF0000] ">Explore More</a><img src="./images/arrow.png" alt=""></button>
+            <button class="flex items-center w-48 text-xl font-medium text-white p-4 bg-gradient-to-r from-[#FF8938] to-[#FF0000] justify-evenly rounded-lg">Explore More<img src="./images/arrow.png" alt=""></button>
         </div>
-        <div>
-            <img src="./images/banner.png" alt="" class="pt-18 mx-8">
+        <div class="relative top-12">
+          <div><img src="./images/banner.png" alt="" class="pt-18 lg:mx-8"></div>
+          <div class="lg:container lg:absolute lg:bottom-6 lg:left-32 flex h-24 lg:w-1/3 absolute bottom-0.5 left-16 object-scale-down p-5 place-content-center rounded-lg bg-white shadow-md">
+              <div ><img src="./images/star.png" alt="" class="max-w-fit max-h-fit"></div>
+              <div>
+                <h1 class="text-3xl	font-extrabold">5.00</h1>
+                <h4 class="text-base font-semibold text-neutral-500">Trust Pilot Ratings</h4>
+              </div>
+            </div>
         </div>
     </section>
 </body>
